@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: rgb(32, 60, 116);
+}
+
+.divBody {
+  background-color: white;
+  min-height: 93vh;
+  padding: 1rem;
+}    
+
+
+input {
+  text-transform: uppercase;
+  /* margin-bottom: 0.2em;  */
+  /*separa renglones*/
+}
+::placeholder {
+  text-transform: none;
+}
+
+.botones button {
+  margin: 0em 0.5em 0.5em 0em;
+}
+
+
