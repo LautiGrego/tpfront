@@ -9,7 +9,7 @@ function App() {
     <>
       <BrowserRouter>
       <Menu />
-          <div className="divBody" style={{ backgroundColor: '#88888' }}>
+          <div className="divBody">
             <Routes>
               <Route path="/inicio" element={<Inicio />} />
               <Route path="*" element={<Navigate to="/inicio" replace />} /> 

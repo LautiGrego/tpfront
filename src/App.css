@@ -1,50 +1,13 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body {
-  background-color: rgb(32, 60, 116);
-}
 
 .divBody {
-  background-color: white;
   min-height: 93vh;
   padding: 1rem;
+  background-image: url('https://images6.alphacoders.com/122/1220288.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
 }    
 
 
@@ -62,3 +25,25 @@ input {
 }
 
 
+
+.card {  
+  transition: 0.3s ease;
+  transform: scale(0.8);
+  border-color: black;
+  
+
+}
+
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  background-color: rgba(170, 225, 248, 0.785);
+}
+
+.formulario {
+  background-color: rgba(0, 0, 0, 0.363);
+}
+
+.form-control {
+  margin-top: 3%;
+}
