@@ -1,11 +1,13 @@
 import React from "react";
+import "../App.css"
 import { NavLink } from "react-router-dom";
+
 
 function Menu() {
   return (
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<nav id="menu" class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand">WTAS WEB</a>
+    <a class="navbar-brand">10</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,11 +29,14 @@ function Menu() {
             </NavLink>
         </li>
 
+        <li className="nav-item">
+            <NavLink className="nav-link" to="/vehiculos">
+              Vehiculos
+            </NavLink>
+        </li>
+
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
     </div>
   </div>
 </nav>

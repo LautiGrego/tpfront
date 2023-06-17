@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import EquiposBuscar from "./EquiposBuscar";
-import EquiposListado from "./EquiposListado";
-import EquiposRegistro from "./EquiposRegistro";
-import { equiposService } from "../../services/equipos.service";
+import VehiculosBuscar from "./VehiculosBuscar";
+import VehiculosListado from "./VehiculosListado";
+import VehiculosRegistro from "./VehiculosRegistro";
+import { vehiculosService } from "../../services/vehiculos.service";
 import moment from "moment";
 
-function Equipos() {
+function Vehiculos(){
 
   const TituloAccionABMC = {
     A: "(Agregar)",
@@ -16,7 +16,7 @@ function Equipos() {
   };
   const [AccionABMC, setAccionABMC] = useState("L");
 
-  const [Nombre, setNombre] = useState("");
+  const [Modelo, setModelo] = useState("");
   const [Activo, setActivo] = useState("");
 
   const [Items, setItems] = useState(null);
@@ -37,7 +37,7 @@ function Equipos() {
     else {
       _pagina = Pagina;
     }
-    const data = await equiposService.Buscar(Nombre, Activo, _pagina);
+    const data = await vehiculosService.Buscar(Modelo, Activo, _pagina);
     setItems(data.Items);
     setRegistrosTotal(data.RegistrosTotal);
 
@@ -51,7 +51,7 @@ function Equipos() {
 
 
   async function BuscarPorId(item, accionABMC) {
-    const data = await equiposService.BuscarPorId(item);
+    const data = await vehiculosService.BuscarPorId(item);
     setItem(data);
     setAccionABMC(accionABMC);
   }
@@ -71,10 +71,10 @@ function Equipos() {
   function Agregar() {
     setAccionABMC("A");
     setItem({
-      IdEquipo: 0,
-      Nombre: null,
-      CantCopas: null,
-      fechaFundacion: moment(new Date()).format("YYYY-MM-DD"),
+      IdVehiculo: 0,
+      Modelo: null,
+      Cantidad: null,
+      FechaLanzamiento: moment(new Date()).format("YYYY-MM-DD"),
       Activo: true,
     });
   }
@@ -91,13 +91,13 @@ function Equipos() {
         " el registro?"
     );
     if (resp) {
-      await equiposService.ActivarDesactivar(item);
+      await vehiculosService.ActivarDesactivar(item);
       await Buscar();
     }
   }
   
   async function Grabar(item) {
-    await equiposService.Grabar(item);
+    await vehiculosService.Grabar(item);
     await Buscar()
     Volver();
   }
@@ -111,12 +111,12 @@ function Equipos() {
   return (
     <div>
       <div className="tituloPagina">
-        Equipos <small>{TituloAccionABMC[AccionABMC]}</small>
+        Vehiculos <small>{TituloAccionABMC[AccionABMC]}</small>
       </div>
 
-      {AccionABMC === "L" && < EquiposBuscar
-        Nombre={Nombre}
-        setNombre={setNombre}
+      {AccionABMC === "L" && < VehiculosBuscar
+        Modelo={Modelo}
+        setModelo={setModelo}
         Activo={Activo}
         setActivo={setActivo}
         Buscar={Buscar}
@@ -124,7 +124,7 @@ function Equipos() {
       />}
 
       {/* Tabla de resutados de busqueda y Paginador */}
-      {AccionABMC === "L" && Items?.length > 0 && <EquiposListado
+      {AccionABMC === "L" && Items?.length > 0 && <VehiculosListado
         {...{
           Items,
           Consultar,
@@ -143,11 +143,11 @@ function Equipos() {
         No se encontraron registros...
       </div>}
 
-            {/* Formulario de alta/modificacion/consulta */}
-            {AccionABMC !== "L" && <EquiposRegistro
+      {/* Formulario de alta/modificacion/consulta */}
+      {AccionABMC !== "L" && <VehiculosRegistro
         {...{ AccionABMC, Item, Grabar, Volver }}
       />}
     </div>
   );
 }
-export { Equipos };
+export { Vehiculos };

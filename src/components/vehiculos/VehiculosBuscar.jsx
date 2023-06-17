@@ -1,19 +1,19 @@
 import React from "react";
-export default function PersonajesBuscar ({Nombre, setNombre, Activo, setActivo, Buscar, Agregar}) {
+export default function VehiculosBuscar ({Modelo, setModelo, Activo, setActivo, Buscar, Agregar}) {
 
     return (
-    <form className="formulario" name="FormBusqueda">
+    <form name="FormBusqueda">
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-4 col-md-2">
-            <label className="col-form-label">Nombre:</label>
+            <label className="col-form-label">Modelo:</label>
           </div>
           <div className="col-sm-8 col-md-4">
             <input
               type="text"
               className="form-control"
-              onChange={(e) => setNombre(e.target.value)}
-              value={Nombre}
+              onChange={(e) => setModelo(e.target.value)}
+              value={Modelo}
               maxLength="55"
               autoFocus
             />
