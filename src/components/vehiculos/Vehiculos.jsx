@@ -5,6 +5,8 @@ import VehiculosRegistro from "./VehiculosRegistro";
 import { vehiculosService } from "../../services/vehiculos.service";
 import moment from "moment";
 
+function Vehiculos(){
+
   const TituloAccionABMC = {
     A: "(Agregar)",
     B: "(Eliminar)",
@@ -147,4 +149,5 @@ import moment from "moment";
       />}
     </div>
   );
+}
 export { Vehiculos };

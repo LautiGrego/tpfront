@@ -18,7 +18,7 @@ function Inicio() {
   
   </div>
   <div className="col">
-    <NavLink className='nav-link' to=''>
+    <NavLink className='nav-link' to='/vehiculos'>
     <div className="card">
       <img src="https://i.pinimg.com/originals/77/2b/96/772b9670c38900eaf0422821e5cb9965.jpg" className="card-img-top" alt="..."/>
       <div className="card-body">
