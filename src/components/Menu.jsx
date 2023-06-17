@@ -21,8 +21,12 @@ function Menu() {
             <NavLink className="nav-link" to="/personajesDBZ">
               Personajes
             </NavLink>
-          </li>
-
+        </li>
+        <li className="nav-item">
+            <NavLink className="nav-link" to="/vehiculos">
+              Vehiculos
+            </NavLink>
+        </li>
       </ul>
 
     </div>
