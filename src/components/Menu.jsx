@@ -20,7 +20,12 @@ function Menu() {
             <NavLink className="nav-link" to="/personajesDBZ">
               Personajes
             </NavLink>
-          </li>
+        </li>
+        <li className="nav-item">
+            <NavLink className="nav-link" to="/equipos">
+              Equipos
+            </NavLink>
+        </li>
 
       </ul>
       <form class="d-flex" role="search">
