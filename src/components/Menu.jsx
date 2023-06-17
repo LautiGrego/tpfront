@@ -34,6 +34,12 @@ function Menu() {
               Vehiculos
             </NavLink>
         </li>
+        
+        <li className="nav-item">
+            <NavLink className="nav-link" to="/comidas">
+              Comidas
+            </NavLink>
+        </li>
 
       </ul>
 

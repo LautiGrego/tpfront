@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import { Personajes } from './components/personajes/Personajes';
 import { Equipos } from './components/equipos/Equipos';
 import { Vehiculos } from './components/vehiculos/Vehiculos';
+import { Comidas } from './components/comidas/Comidas';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/personajesDBZ" element={<Personajes/>} /> 
               <Route path="/equipos" element={<Equipos/>} /> 
               <Route path="/vehiculos" element={<Vehiculos/>} /> 
+              <Route path="/comidas" element={<Comidas/>} /> 
             </Routes>
           </div>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function EquiposRegistro({
+export default function ComidasRegistro({
   AccionABMC,
   Item,
   Grabar,
@@ -60,29 +60,29 @@ export default function EquiposRegistro({
           {/* campo NivelDePoder*/}
           <div className="row">
             <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="CantCopas">
-                Cantidad De Copas<span className="text-danger">*</span>:
+              <label className="col-form-label" htmlFor="Peso">
+                Peso<span className="text-danger">*</span>:
               </label>
             </div>
             <div className="col-sm-8 col-md-6">
               <input
                 type="number" step=".01"
-                {...register("CantCopas", {
-                  required: { value: true, message: "Cantidad de copas es requerido" },
+                {...register("Peso", {
+                  required: { value: true, message: "Peso es requerido" },
                   min: {
                     value: 0.01,
-                    message: "Cantidad de debe ser mayor a 0",
+                    message: "Peso de debe ser mayor a 0",
                   },
                   max: {
                     value: 99999999.99,
-                    message: "Cantidad de debe ser menor o igual a 99999.99",
+                    message: "Peso de debe ser menor o igual a 99999.99",
                   },
                 })}
                 className={
-                  "form-control " + (errors?.CantCopas? "is-invalid" : "")
+                  "form-control " + (errors?.Peso? "is-invalid" : "")
                 }
               />
-              <div className="invalid-feedback">{errors?.CantCopas?.message}</div>
+              <div className="invalid-feedback">{errors?.Peso?.message}</div>
             </div>
           </div>
           
@@ -90,22 +90,22 @@ export default function EquiposRegistro({
           {/* campo fechaFundacion */}
           <div className="row">
             <div className="col-sm-4 col-md-3 offset-md-1">
-              <label className="col-form-label" htmlFor="fechaNacimiento">
-                Fecha de Fundacion<span className="text-danger">*</span>:
+              <label className="col-form-label" htmlFor="FechaCreacion">
+                Fecha de Creacion<span className="text-danger">*</span>:
               </label>
             </div>
             <div className="col-sm-8 col-md-6">
               <input
                 type="date"
-                {...register("fechaFundacion", {
-                  required: { message: "Fecha de fundacion es requerido" }
+                {...register("FechaCreacion", {
+                  required: { message: "Fecha de Creacion es requerido" }
                 })}
                 className={
-                  "form-control " + (errors?.fechaFundacion ? "is-invalid" : "")
+                  "form-control " + (errors?.FechaCreacion ? "is-invalid" : "")
                 }
               />
               <div className="invalid-feedback">
-                {errors?.fechaFundacion?.message}
+                {errors?.FechaCreacion?.message}
               </div>
             </div>
           </div>
@@ -170,4 +170,3 @@ export default function EquiposRegistro({
     </form>
   );
 }
-

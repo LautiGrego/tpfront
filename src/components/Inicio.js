@@ -29,6 +29,7 @@ function Inicio() {
     </NavLink>
   </div>
   <div className="col">
+    <NavLink className='nav-link' to='/comidas'>
     <div className="card">
       <img src="https://media.istockphoto.com/id/1037517908/es/foto/carne-estilo-argentino-con-salsa-chimichurri.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=AIybDDKzLOYu7JVco1BIqdiJeef6otfapGNgT53Sc8U=" className="card-img-top" alt="..."/>
       <div className="card-body">
@@ -36,8 +37,10 @@ function Inicio() {
         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
+    </NavLink>
   </div>
   <div className="col">
+    <NavLink className='nav-link' to='/equipos'>
     <div className="card">
       <img src="https://fondosmil.com/fondo/6996.jpg" className="card-img-top" alt="..."/>
       <div className="card-body">
@@ -45,6 +48,7 @@ function Inicio() {
         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
+    </NavLink>
   </div>
 </div>
 
