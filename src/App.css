@@ -1,17 +1,5 @@
 
-
-.divBody {
-  min-height: 93vh;
-  padding: 1rem;
-  background-image: url('https://images6.alphacoders.com/122/1220288.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-
-}    
-
-
-input {
+input{
   text-transform: uppercase;
   /* margin-bottom: 0.2em;  */
   /*separa renglones*/
@@ -25,25 +13,302 @@ input {
 }
 
 
+/*INICIO*/
+
+.divBody {
+  min-height: 93vh;
+  padding: 1rem;
+  background-image: url('https://www.solofondos.com/wp-content/uploads/2015/11/21omxpw.jpg');
+  background-color: rgba(0, 0, 0, 0.61);
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}    
+
 
 .card {  
+  margin: auto;
   transition: 0.3s ease;
   transform: scale(0.8);
-  border-color: black;
-  
-
+  border-color: black;  
+  text-align: center;
+  background-color: rgb(44, 44, 44) !important;
+  color: rgba(255, 255, 255, 0.705) !important;
 }
 
+.titulo{
+  font-size: 28px;
+  font-weight: bold;
+}
 
-.card:hover {
+.texto{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card:hover{
   transform: scale(0.9, 0.9);
-  background-color: rgba(170, 225, 248, 0.785);
+  background-color: rgba(94, 94, 94, 0.785) !important;
+  color: white;
 }
 
-.formulario {
-  background-color: rgba(0, 0, 0, 0.363);
+.carta{
+  width:700px;
+  box-shadow: 2px 4px 9px black;
+}
+
+.carta-izq{
+  animation: mover-izq 1s ease-in-out 1;
+}
+
+@keyframes mover{
+  0%{
+    transform: translateX(-3000px);
+  }
+}
+
+@keyframes mover-izq{
+  0%{
+    transform: translateX(-3000px);
+  }
+}
+
+.carta-der{
+  animation: mover-der 1s ease-in-out 1;
+}
+
+@keyframes mover-der{
+  0%{
+    transform: translateX(3000px);
+  }
+}
+
+.imagen{
+  height: 500px;
+  filter: brightness(70%);
+  border: none;
+}
+
+.formulario{
+  margin: auto;
+  background-color: rgba(94, 94, 94, 0.527);
+  width: 70%;
+  color: white;
+  animation: mover 0.3s ease-in-out 1;
 }
 
 .form-control {
   margin-top: 3%;
+}
+
+
+/*MENU*/
+
+#logo{
+  height: 100px;
+  width: 100px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .navbar-nav {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu .navbar-nav .nav-item {
+  margin-right: 15px; /* Ajusta el espaciado horizontal entre los elementos de la lista */
+}
+
+.menu ul li:hover{
+  transform: scale(1.1,1.1);
+  transition: all 200ms;
+}
+
+/*Personajes Buscar*/
+
+.nombreDiv{
+  height: 50px;
+  text-align: center;
+}
+
+.nombreDiv label{
+  margin-top: 4px;
+  font-size: 25px;
+}
+
+.tituloPagina{
+  color: white !important;
+  font-size: 40px;
+  font-weight: 500;
+  margin:50px;
+  margin-bottom: 30px;
+  margin-left: 280px;
+}
+
+.btn-agregar,.btn-grabar{
+  background-color: #007b00 !important;
+  border: none !important;
+  margin-left: 50px !important;
+}
+
+.btn-agregar:hover,.btn-grabar:hover{
+  background-color: #006300 !important;
+  transform: scale(1.1,1.1) !important;
+  transition: all 200ms !important;
+}
+
+.btn-buscar{
+  background-color: rgb(34, 34, 34)!important;
+  border: none !important;
+  margin-left: 50px !important;
+}
+
+.btn-buscar:hover{
+  background-color: rgb(24, 24, 24) !important;
+  transform: scale(1.1,1.1) !important;
+  transition: all 200ms !important;
+}
+
+.btn-imprimir{
+  border: none !important;
+  margin-left: 50px !important;
+}
+
+.btn-imprimir:hover{
+  background-color: rgb(22, 78, 201) !important;
+  transform: scale(1.1,1.1) !important;
+  transition: all 200ms !important;
+}
+
+.btn-cancelar{
+  background-color: #a51818 !important;
+  color: white !important;
+  border: none !important;
+  margin-left: 50px !important;
+}
+
+.btn-cancelar:hover{
+  background-color: #7e1111 !important;
+  transform: scale(1.1,1.1) !important;
+  transition: all 200ms !important;
+}
+
+.table-responsive{
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+.table-responsive th{
+  background-color: rgb(34, 34, 34)!important;
+  color: white !important;
+}
+
+.table-responsive td{
+  background-color:rgba(255, 255, 255, 0.911) !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+}
+
+.table-responsive td button{
+  border: none;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.pencil{
+  color: #006300 !important;
+}
+
+.pencil:hover{
+  background-color: #006300 !important;
+  color: white !important;
+}
+
+.paginador{
+  color: white;
+  margin: 10px;
+}
+
+.div-reg{
+  color: white;
+}
+
+.div-reg label{
+  font-size: 20px;
+  margin-left: 114px;
+  margin-top: 17px;
+}
+
+/* Responsive */
+
+@media (max-width: 1335px){
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    background-color: rgba(94, 94, 94, 0.785) !important;
+    color: white;
+  }
+  
+  .carta{
+    width:600px;
+    box-shadow: 2px 4px 9px black;
+    animation: mover 2s ease-in-out 1;
+  }
+
+  .imagen{
+    height: 500px;
+    filter: brightness(70%);
+    border: none;
+  }
+}
+
+@media (max-width: 1120px){
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    background-color: rgba(94, 94, 94, 0.785) !important;
+    color: white;
+  }
+  
+  .carta{
+    width:500px;
+    box-shadow: 2px 4px 9px black;
+    animation: mover 2s ease-in-out 1;
+  }
+
+  .imagen{
+    height: 500px;
+    filter: brightness(70%);
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    background-color: rgba(94, 94, 94, 0.785) !important;
+    color: white;
+  }
+  
+  .carta{
+    width:350px;
+    box-shadow: 2px 4px 9px black;
+    animation: mover 2s ease-in-out 1;
+  }
+
+  .imagen{
+    height: 300px;
+    filter: brightness(70%);
+    border: none;
+  }
+  .tituloPagina{
+    margin-left: 100px;
+  }
 }

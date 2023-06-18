@@ -1,4 +1,5 @@
 import React from "react";
+import "../../App.css"
 import moment from "moment";
 
 export default function VehiculosListado({
@@ -43,7 +44,7 @@ export default function VehiculosListado({
                     <i className="fa fa-eye"></i>
                   </button>
                   <button
-                    className="btn btn-sm btn-outline-primary"
+                    className="pencil btn btn-sm btn-outline-primary"
                     title="Modificar"
                     onClick={() => Modificar(Item)}
                   >
@@ -93,8 +94,8 @@ export default function VehiculosListado({
           </div>
 
           <div className="col">
-            <button className="btn btn-primary float-end" onClick={() => Imprimir()}>
-              <i className="fa fa-print"></i>Imprimir
+            <button className="btn-imprimir btn btn-primary float-end" onClick={() => Imprimir()}>
+              <i className="fa fa-print"></i> Imprimir
             </button>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../../App.css"
 import PersonajesBuscar from "./PersonajesBuscar";
 import PersonajesListado from "./PersonajesListado";
 import PersonajesRegistro from "./PersonajesRegistro";

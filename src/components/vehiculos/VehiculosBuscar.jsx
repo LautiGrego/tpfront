@@ -2,10 +2,10 @@ import React from "react";
 export default function VehiculosBuscar ({Modelo, setModelo, Activo, setActivo, Buscar, Agregar}) {
 
     return (
-    <form name="FormBusqueda">
+    <form className="formulario" name="FormBusqueda">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-4 col-md-2">
+          <div className="col-sm-4 col-md-2 nombreDiv">
             <label className="col-form-label">Modelo:</label>
           </div>
           <div className="col-sm-8 col-md-4">
@@ -18,7 +18,7 @@ export default function VehiculosBuscar ({Modelo, setModelo, Activo, setActivo, 
               autoFocus
             />
           </div>
-          <div className="col-sm-4 col-md-2">
+          <div className="col-sm-4 col-md-2 nombreDiv">
             <label className="col-form-label">Activo:</label>
           </div>
           <div className="col-sm-8 col-md-4">
@@ -41,14 +41,14 @@ export default function VehiculosBuscar ({Modelo, setModelo, Activo, setActivo, 
           <div className="col text-center botones">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn-buscar btn btn-primary"
             onClick={() => Buscar(1) }
           >
             <i className="fa fa-search"> </i> Buscar
           </button>
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn-agregar btn btn-primary"
             onClick={() => Agregar() }
           >
             <i className="fa fa-plus"> </i> Agregar

@@ -24,7 +24,7 @@ export default function EquiposRegistro({
         <fieldset disabled={AccionABMC === "C"}>
 
           {/* campo nombre */}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Nombre">
                 Nombre<span className="text-danger">*</span>:
@@ -58,7 +58,7 @@ export default function EquiposRegistro({
           </div>
 
           {/* campo NivelDePoder*/}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="CantCopas">
                 Cantidad De Copas<span className="text-danger">*</span>:
@@ -88,7 +88,7 @@ export default function EquiposRegistro({
           
 
           {/* campo fechaFundacion */}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="fechaNacimiento">
                 Fecha de Fundacion<span className="text-danger">*</span>:
@@ -111,7 +111,7 @@ export default function EquiposRegistro({
           </div>
 
           {/* campo Activo */}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Activo">
                 Activo<span className="text-danger">*</span>:
@@ -140,16 +140,16 @@ export default function EquiposRegistro({
 
         {/* Botones Grabar, Cancelar/Volver' */}
         <hr />
-        <div className="row justify-content-center">
+        <div className="row justify-content-center div-reg">
           <div className="col text-center botones">
             {AccionABMC !== "C" && (
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn-grabar btn btn-primary">
                 <i className="fa fa-check"></i> Grabar
               </button>
             )}
             <button
               type="button"
-              className="btn btn-warning"
+              className="btn-cancelar btn btn-warning"
               onClick={() => Volver()}
             >
               <i className="fa fa-undo"></i>

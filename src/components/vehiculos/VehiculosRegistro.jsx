@@ -24,7 +24,7 @@ export default function VehiculoRegistro({
         <fieldset disabled={AccionABMC === "C"}>
 
           {/* campo Modelo */}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Modelo">
                 Modelo<span className="text-danger">*</span>:
@@ -58,7 +58,7 @@ export default function VehiculoRegistro({
           </div>
 
           {/* campo Cantidad*/}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Cantidad">
                 Cantidad <span className="text-danger">*</span>:
@@ -87,7 +87,7 @@ export default function VehiculoRegistro({
           </div>
           
           {/* campo FechaLanzamiento */}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="FechaLanzamiento">
                 Fecha de Nacimiento<span className="text-danger">*</span>:
@@ -110,7 +110,7 @@ export default function VehiculoRegistro({
           </div>
 
           {/* campo Activo */}
-          <div className="row">
+          <div className="row div-reg">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Activo">
                 Activo<span className="text-danger">*</span>:
@@ -139,16 +139,16 @@ export default function VehiculoRegistro({
 
         {/* Botones Grabar, Cancelar/Volver' */}
         <hr />
-        <div className="row justify-content-center">
+        <div className="row justify-content-center div-reg">
           <div className="col text-center botones">
             {AccionABMC !== "C" && (
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn-grabar btn btn-primary">
                 <i className="fa fa-check"></i> Grabar
               </button>
             )}
             <button
               type="button"
-              className="btn btn-warning"
+              className="btn-cancelar btn btn-warning"
               onClick={() => Volver()}
             >
               <i className="fa fa-undo"></i>

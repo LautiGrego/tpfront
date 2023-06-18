@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import "../../App.css"
 
 export default function PersonajesListado({
   Items,
@@ -43,7 +44,7 @@ export default function PersonajesListado({
                     <i className="fa fa-eye"></i>
                   </button>
                   <button
-                    className="btn btn-sm btn-outline-primary"
+                    className=" pencil btn btn-sm btn-outline-primary"
                     title="Modificar"
                     onClick={() => Modificar(Item)}
                   >
@@ -93,8 +94,8 @@ export default function PersonajesListado({
           </div>
 
           <div className="col">
-            <button className="btn btn-primary float-end" onClick={() => Imprimir()}>
-              <i className="fa fa-print"></i>Imprimir
+            <button className="btn-imprimir btn btn-primary float-end" onClick={() => Imprimir()}>
+              <i className="fa fa-print"></i> Imprimir
             </button>
           </div>
         </div>
